@@ -32,7 +32,7 @@ function App() {
         
         
         <Switch>
-          <Route exact path="/"><Slideshow trends={trending}/></Route>
+          <Route exact path="/movie-library-react/"><Slideshow trends={trending}/></Route>
 
           <Route path="/movies/:id"><MovieInfo/></Route>
           {movieList.map((item,key) => (<Route key={key} path={`/${item.name}`}><MovieRow id={item.id}/></Route>))}
