@@ -1,0 +1,50 @@
+.movieRow{
+    margin: 100px auto 0 auto;
+    
+}
+/*.movieRow--item{
+    margin:20px;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    cursor:pointer;
+}
+
+.movieRow--item:hover{
+    -webkit-box-shadow: 5px 5px 50px -8px #CC0000; 
+    box-shadow: 5px 5px 50px -8px #CC0000;
+}
+
+.movieRow--item img{
+    width: 100%;
+    height: 100%;
+}*/
+
+.movieList{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.listContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loadItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:#ff9900;
+    color:black;
+    cursor:pointer;
+    padding:0 10px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size: 15px;
+}

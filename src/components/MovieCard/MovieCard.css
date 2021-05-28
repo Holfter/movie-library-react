@@ -1,0 +1,83 @@
+.movieRow--item{
+    width: 100%;
+    height:100%;
+}
+
+.img{
+    width: 100%;
+    height:300px;
+}
+
+.movieRow--item img{
+    width: 100%;
+    height: 100%;
+    border-radius:8px;
+}
+.movieCard{
+    position: relative;
+    width: 200px;
+    text-decoration: none;
+    color:white;
+    margin:15px 30px;
+    transition: 0.2s;
+}
+
+.movieCard:hover{
+    transition: transform .3s;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);  
+    transform: scale(1.1);
+    border-radius:5px;
+    background:#ff9900;
+    color:black;
+}
+
+.voteCard{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:0;
+    font-size:18px;
+    padding:0 5px;
+    line-height: 17px;
+    background:rgb(0, 0, 0);
+    color:#ffffff;
+    border-radius: 0 0 10px 0;
+}
+
+.star{
+    color:yellow;
+}
+
+.movieCard:hover img{
+    border-radius: 0
+}
+
+.innerInfo{
+    height: 100%;
+}
+
+.info {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:300px;
+    /*background:rgba(0, 0, 0, 0.541);*/
+    position:absolute;
+    display: block;
+    transition: 0.5s;
+}
+
+.title{
+    font-size: 15px;
+    margin:0 0 5px 5px;
+}
+
+.year p{
+    font-size: 13px;
+    display: inline-block;
+    color:black;
+    background:#ff9900;
+    padding:0 10px;
+    margin-bottom:5px;
+}

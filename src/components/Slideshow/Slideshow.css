@@ -1,0 +1,118 @@
+* {box-sizing:border-box}
+@import "react-slideshow-image/dist/styles.css";
+.slideshow{
+    position: relative;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+
+.each-slide{
+    width: 100%;
+    height: 100vh;
+}
+
+.each-slide img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+.indicators{
+    width: 100%;
+    position:absolute;
+    bottom:20px;
+}
+
+.indicator{
+    max-width: 140px;
+    max-height:190px;
+    cursor:pointer;
+    margin:0 10px;
+}
+
+.indicator img{
+    max-width: 100%;
+    max-height:100%;
+    border-radius:10px;
+    transition:.3s;
+    opacity: 0.5;
+}
+
+.voteAverage{
+    display: inline-block;
+    background:yellow;
+    color:black;
+    padding: 0 10px;
+}
+.indicator img:hover{
+    transition: transform .3s;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);  
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.indicator.active img{
+    transition: transform .3s;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);  
+    transform: scale(1.2);
+    -webkit-box-shadow: 0px 0px 10px 2px #000000; 
+    box-shadow: 0px 0px 10px 2px #000000;
+    border:1px solid white;
+    opacity: 1;
+}
+
+.slideInfo{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    width: 40vw;
+    margin:0 0 0 150px;
+    height:100%;
+}
+
+.slideInfo div h1{
+    font-size: 40px;
+}
+
+.slideInfo .playButton{
+    color:black;
+    display: inline-flex;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.playButton{
+    display: flex;
+    align-items: center;
+}
+.play{
+    color:black;
+    margin-right:8px;
+}
+.backdrop_path{
+    opacity: 0.5;
+}
+
+.filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-box-shadow: inset 0px 0px 50px 30px rgba(0,0,0,0.49); 
+    box-shadow: inset 0px 0px 50px 30px rgba(0,0,0,0.49);
+}
+
+.react-slideshow-container .nav{
+    height: 100vh;
+    transition: 0.2s;
+}
+
+.react-slideshow-container .nav:hover{
+    background: rgba(0, 0, 0, 0.534);
+}
