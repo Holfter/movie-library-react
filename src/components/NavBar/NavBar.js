@@ -8,7 +8,7 @@ function NavBar(props) {
     return (
         <div className="navbar">
             <div className="logo">
-                <Link to="/"><div style={{color:"#ff9900"}}>ZINE</div></Link>
+                <Link to="/movie-library-react/"><div style={{color:"#ff9900"}}>ZINE</div></Link>
             </div>
             
             <SearchIcon/>
