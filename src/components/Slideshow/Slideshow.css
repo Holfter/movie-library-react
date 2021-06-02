@@ -77,7 +77,6 @@
 
 .slideInfo{
     position:absolute;
-    top:10%;
     display: flex;
     z-index: 999;
     width: 40vw;
@@ -114,10 +113,10 @@
 
 .react-slideshow-container .nav{
     color:tomato;
-    height: 100%;
     transition: 0.2s;
 }
 
 .react-slideshow-container .nav:hover{
     background: rgba(0, 0, 0, 0.534);
+    border-radius:50%;
 }

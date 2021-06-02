@@ -11,8 +11,60 @@ body{
     color:white;
 }
 
+.App{
+    transition: 0.5s;
+}
+
+.side{
+    margin-left:15%;
+    transition: 0.5s;
+}
 
 .mainContent{
     display: flex;
     justify-content: center;
 }
+
+.navbar{
+    background: black;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.active{
+    width: 15%;
+    z-index: 999;
+}
+
+.closeSidebar{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.blank{display: none;}
+
+.hamburguer{
+    display: block;
+}
+
+.openSideBar{
+    cursor:pointer;
+    position:absolute;
+    z-index: 999;
+    top:50%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 20px solid tomato;
+}
+

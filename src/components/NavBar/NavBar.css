@@ -3,39 +3,14 @@ a{text-decoration: none;color:white;}
 ul{list-style: none;}
 
 
-.navbar{
-    background: black;
-    height: 100%;
-    width: 0;
+.topNav{
+    width: 100%;
     position: fixed;
-    z-index: 1;
     top:0;
-    left:0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    font-size: 20px;
+    z-index: 999;
 }
-
-.active{
-    width: 15%;
-}
-
-.showSidebar{
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    cursor:pointer;
-}
-
-.blank{display: none;}
-
-.hamburguer{
-    display: block;
-}
-
 
 .fixedBar{
-    padding:0 15%;
     background:rgb(0, 0, 0);
 }
 

@@ -30,7 +30,7 @@ export default function Slideshow(props) {
                                 <div style={{marginBottom: "20px"}}>
                                     <span className="voteAverage">{item.vote_average === 0 ? "" : item.vote_average}</span>
                                     <h1>{item.title ? item.title : item.name}</h1>
-                                    <p>{item.first_air_date ? item.first_air_date.slice(0,4) : item.release_date.slice(0,4)}</p>
+                                    <p style={{color:"tomato"}}>{item.first_air_date ? item.first_air_date.slice(0,4) : item.release_date.slice(0,4)}</p>
                                 </div>
                                 
                                 <p style={{marginBottom:"20px"}}>{item.overview}</p>
