@@ -21,22 +21,30 @@ function App() {
     }
     loadAll()
   }, []);
-
   return (
     <Router>
       <div className="App">
-        <div className="top">
           <NavBar items={movieList}/>
-          <GenreButton items={movieList}/>
+          {/*<GenreButton items={movieList}/>*/}
+        <div className="mainContent">
+          <Switch>
+            <Route exact path="/movie-library-react/">
+              <div style={{
+                display:"flex",
+                flexDirection:"column",
+                width:"100%"
+                }}>
+                <Slideshow trends={trending}/>
+                <MovieRow id={0} title={"Trending"}/>
+              </div>
+                
+            </Route>
+            <Route path="/results"></Route>
+            <Route path="/movies/:id"><MovieInfo/></Route>
+            {movieList.map((item,key) => (<Route key={key} path={`/${item.name}`}><MovieRow id={item.id} title={item.name}/></Route>))}
+          </Switch>
         </div>
         
-        
-        <Switch>
-          <Route exact path="/movie-library-react/"><Slideshow trends={trending}/></Route>
-
-          <Route path="/movies/:id"><MovieInfo/></Route>
-          {movieList.map((item,key) => (<Route key={key} path={`/${item.name}`}><MovieRow id={item.id}/></Route>))}
-        </Switch>
       </div>
     </Router>
   );

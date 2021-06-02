@@ -1,17 +1,16 @@
 .movieGenre{
-    height: 40px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     color: white;
 }
 
 .linkButton{
-    padding-top:10px;
     transition:0.2s;
 }
 .linkButton:hover{
     background:#ff9900;
+}
+
+.genreButton{
+    padding-top:20px;
 }
 
 .activeBtn{

@@ -1,6 +1,5 @@
 import React from 'react'
 import "./GenreButton.css"
-import tmdbLogo from "../Tmdb.png"
 import {NavLink} from "react-router-dom"
 
 export default function GenreButton(props) {
@@ -13,7 +12,6 @@ export default function GenreButton(props) {
                     </div>
                 </NavLink>
             ))}
-            {/*<img className="tmdbLogo" src={tmdbLogo} alt="tmdbLogo"/>*/}
             
         </div>
         

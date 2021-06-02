@@ -9,9 +9,9 @@ import {Link} from "react-router-dom";
 export default function Slideshow(props) {
     const array = props.trends.map((i,key) => (<div key={key} className="indicator"><img src={`https://image.tmdb.org/t/p/original/${i.poster_path}`}/></div>))
     const zoomOutProperties = {
-        indicators: true,
+        indicators: false,
         scale: 0.4,
-        indicators: i => (<div className="indicator">{array[i]}</div>),
+        //indicators: i => (<div className="indicator">{array[i]}</div>),
         duration:4000,
         canSwipe:true,
         autoplay:false,
@@ -36,9 +36,8 @@ export default function Slideshow(props) {
                                 <p style={{marginBottom:"20px"}}>{item.overview}</p>
                                 <Link to={`/movies/${item.id}`}><span className="playButton"><PlayArrowIcon className="play"/> Play</span></Link>
                             </div>
-                            
-                            
                         </div>
+                        <div className="gradient"></div>
                         <img className="backdrop_path" src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="image" />
                     </div>
                 ))}

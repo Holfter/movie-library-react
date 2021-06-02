@@ -30,9 +30,9 @@ export default function MovieRow(props) {
     }
     return (
         <div className="movieRow">
-            <h1>{props.title}</h1>
-            <h1></h1>
+            
             <div className="listContent">
+                <h1 className="genreTitle">{props.title}</h1>
                 <div className="movieList">
                     {movies && movies.map((item,key) => (
                         <MovieCard
