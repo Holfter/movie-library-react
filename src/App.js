@@ -7,7 +7,7 @@ import MovieInfo from "./components/MovieInfo/MovieInfo"
 import NavBar from "./components/NavBar/NavBar"
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Slideshow from "./components/Slideshow/Slideshow"
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import MenuIcon from '@material-ui/icons/Menu';
 
 function App() {
 
@@ -28,15 +28,13 @@ function App() {
   
   return (
     <Router>
-      <div className={sidebar ? "App side" : "App"}>
-          <div className="openSideBar" onClick={showSideBar}></div>
+      <div className="App">
           <NavBar items={movieList} func={showSideBar}/>
           <div className={sidebar ? 'navbar active' : "navbar"}>
-                <div className="closeSidebar" onClick={showSideBar}>X</div>
                 <GenreButton items={movieList} side={sidebar}/>
           </div>
 
-        <div className="mainContent">
+        <div className={sidebar ? "mainContent side" : "mainContent"}>
 
           <Switch>
             <Route exact path="/movie-library-react/">

@@ -10,12 +10,28 @@ function NavBar(props) {
     return (
         <div className="topNav">
             <div className="fixedBar">
-                <div style={{display:"flex", alignItems:"center",justifyContent:"space-around"}}>
-                    <div style={{display:"flex", alignItems:"center"}}>
-                        <Link to="/movie-library-react"><img className="logo" src={Logo} alt="" /></Link>
+                
+                    <div className="logoAndBtn">
+                        <div className="openSideBar" onClick={props.func}><MenuIcon/></div>
+                        <Link to="/movie-library-react">
+                            <div className="logoHome">
+                                <img className="logo" src={Logo} alt="" />
+                                <span>Zine</span>
+                            </div>
+                            
+                        </Link>
+                        
                     </div>
-                    <input type="text" />
-                </div>
+                    <form className="form" action="submit">
+                        <input className="searchMovie" type="text" />
+                        <button className="searchButton"><SearchIcon/></button>
+                    </form>
+                    <div>
+                        <div>
+                            <div className="profilePic"></div>
+                        </div>
+                    </div>
+                
                 
             </div>
         </div>

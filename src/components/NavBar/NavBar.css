@@ -8,12 +8,69 @@ ul{list-style: none;}
     position: fixed;
     top:0;
     z-index: 999;
+    background:#000000;
 }
 
 .fixedBar{
-    background:rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:rgba(0, 0, 0, 0);
+    padding:0 30px;
+}
+
+.searchButton{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border:none;
+    background:#333333;
+    color:white;
+    border-radius:0px 5px 5px 0px;
+    cursor:pointer;
+}
+
+.openSideBar{
+    cursor:pointer;
+    margin-right:20px;
+}
+
+.logoHome{
+    font-size:20px;
+    display: flex;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+}
+
+.logoAndBtn{
+    display: flex;
+    align-items: center;
 }
 
 .logo{
     width: 35px;
+    margin-right:5px;
+}
+
+.searchMovie{
+    outline: none;
+    background:#333333;
+    border:none;
+    width: 500px;
+    height: 30px;
+    border-radius:5px 0px 0px 5px;
+    color:white;
+    padding-left:10px;
+}
+
+.profilePic{
+    border:1px solid white;
+    width: 40px;
+    height: 40px;
+    background:#333333;
+    border-radius:50%;
 }

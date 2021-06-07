@@ -33,7 +33,7 @@ export default function Slideshow(props) {
                                     <p style={{color:"tomato"}}>{item.first_air_date ? item.first_air_date.slice(0,4) : item.release_date.slice(0,4)}</p>
                                 </div>
                                 
-                                <p style={{marginBottom:"20px"}}>{item.overview}</p>
+                                <p className="overview" style={{marginBottom:"20px"}}>{item.overview}</p>
                                 <Link to={`/movies/${item.id}`}><span className="playButton"><PlayArrowIcon className="play"/> Play</span></Link>
                             </div>
                         </div>

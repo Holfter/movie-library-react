@@ -11,21 +11,19 @@ body{
     color:white;
 }
 
-.App{
-    transition: 0.5s;
-}
-
 .side{
-    margin-left:15%;
+    margin-left:10%;
     transition: 0.5s;
 }
 
 .mainContent{
     display: flex;
     justify-content: center;
+    transition: 0.5s;
 }
 
 .navbar{
+    margin-top:40px;
     background: black;
     height: 100%;
     width: 0;
@@ -35,7 +33,7 @@ body{
     left:0;
     overflow-x: hidden;
     transition: 0.5s;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .active{
@@ -56,15 +54,45 @@ body{
     display: block;
 }
 
-.openSideBar{
-    cursor:pointer;
-    position:absolute;
-    z-index: 999;
-    top:50%;
-    width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 20px solid tomato;
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	border-radius: 10px;
+	background-color: #00000000;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #f55f44;
+}
+
+@media (max-width:800px) {
+    .form, .searchMovie, .searchButton:nth-last-child(1){
+        display: none;
+    }
+
+    .logoAndBtn{
+        justify-self: center;
+    }
+}
+
+@media (max-width:1000px){
+    .gradient{
+        display: none;
+    }
+
+    .backdrop_path{
+        width: 100%;
+        float: none;
+    }
 }
 
