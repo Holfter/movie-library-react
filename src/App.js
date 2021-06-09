@@ -5,16 +5,14 @@ import MovieRow from "./components/MovieRow/MovieRow"
 import GenreButton from "./components/GenreButton/GenreButton"
 import MovieInfo from "./components/MovieInfo/MovieInfo"
 import NavBar from "./components/NavBar/NavBar"
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Slideshow from "./components/Slideshow/Slideshow"
-import MenuIcon from '@material-ui/icons/Menu';
 
 function App() {
 
   const[movieList, setMovieList] = useState([])
   const[trending, setTrending] = useState([])
   const [sidebar, setSidebar] = useState(false);
-
   const showSideBar = () => setSidebar(!sidebar)
 
   useEffect(() => {
@@ -25,10 +23,9 @@ function App() {
     }
     loadAll()
   }, []);
-  
   return (
-    <Router>
-      <div className="App">
+    <Router> 
+      <div className="App">   
           <NavBar items={movieList} func={showSideBar}/>
           <div className={sidebar ? 'navbar active' : "navbar"}>
                 <GenreButton items={movieList} side={sidebar}/>

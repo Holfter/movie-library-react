@@ -145,6 +145,11 @@ const tmdb = {
 		}else{
 			return result.results[0].key
 		}
+	},
+
+	getCast : async (id) => {
+		let cast = await apiReq(`/movie/${id}/credits?api_key=${API_KEY}`)
+		return cast
 	}
 
 }
