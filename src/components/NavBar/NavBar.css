@@ -14,9 +14,9 @@ ul{list-style: none;}
 .fixedBar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background:rgba(0, 0, 0, 0);
-    padding:0 30px;
+    padding:5px 0;
 }
 
 .searchButton{
@@ -36,7 +36,18 @@ ul{list-style: none;}
 }
 
 .logoHome{
+    color:rgb(255, 255, 255);
     font-size:20px;
+    display: flex;
+    align-items: center;
+    padding:0 10px 0 5px;
+    border:2px solid rgba(255, 255, 255, 0.425);
+    border-radius:10px;
+}
+
+.logoHome > span:first-child{
+    font-size: 25px;
+    color:#ee5c42;
     display: flex;
     align-items: center;
 }
@@ -49,11 +60,6 @@ ul{list-style: none;}
 .logoAndBtn{
     display: flex;
     align-items: center;
-}
-
-.logo{
-    width: 35px;
-    margin-right:5px;
 }
 
 .searchMovie{

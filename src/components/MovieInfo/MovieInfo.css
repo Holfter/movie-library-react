@@ -114,6 +114,10 @@
         position: absolute;
         left:0;   
     }
+
+    .genreTitle{
+        margin: 0 0 0 50px;
+    }
 }
 
 

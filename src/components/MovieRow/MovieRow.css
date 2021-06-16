@@ -52,8 +52,9 @@
 .genreTitle{
     display: inline-block;
     align-self: flex-start;
-    margin-left:170px;
+    margin-left:150px;
     font-size:25px;
+    border-bottom:2px solid #ee5c42;
 }
 
 

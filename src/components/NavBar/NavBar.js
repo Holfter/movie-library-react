@@ -1,5 +1,5 @@
 import React,{useState, useRef} from 'react'
-import Logo from "../../logo.png"
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import "./NavBar.css"
 import {Link, useHistory} from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu'
@@ -29,7 +29,7 @@ export function NavBar(props) {
                         <div className="openSideBar" onClick={props.func}><MenuIcon/></div>
                         <Link to="/">
                             <div className="logoHome">
-                                <img className="logo" src={Logo} alt="" />
+                                <span><PlayArrowIcon/></span>
                                 <span>Zine</span>
                             </div>
                             
@@ -44,7 +44,7 @@ export function NavBar(props) {
                     <div>
                         <div style={{display:"flex"}}>
                             <button onClick={() => handleAccordion()} className="accordion">{accordion === "active" ? <CloseIcon/> : <SearchIcon/>}</button>
-                            <div className="profilePic"></div>
+                            
                         </div>
                     </div>
             </div>

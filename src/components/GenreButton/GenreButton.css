@@ -2,17 +2,19 @@
     color: white;
 }
 
-.linkButton{
-    transition:0.2s;
-}
-.linkButton:hover{
-    background:#ff9900;
-}
-
 .genreButton{
+    width: max-content;
     padding-top:20px;
 }
 
-.activeBtn{
-    border-top:2px solid #ff9900;
+.activeBtn div{
+    border-bottom:1px solid #ee5c42;
+}
+
+.linkButton div:hover{
+    border-bottom: 1px solid #ee5c42;
+}
+
+.movieGenre{
+    padding-left:10px;
 }
