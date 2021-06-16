@@ -27,7 +27,7 @@ export function NavBar(props) {
                 
                     <div className="logoAndBtn">
                         <div className="openSideBar" onClick={props.func}><MenuIcon/></div>
-                        <Link to="/movie-library-react">
+                        <Link to="/">
                             <div className="logoHome">
                                 <img className="logo" src={Logo} alt="" />
                                 <span>Zine</span>

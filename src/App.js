@@ -5,7 +5,7 @@ import MovieRow from "./components/MovieRow/MovieRow"
 import GenreButton from "./components/GenreButton/GenreButton"
 import MovieInfo from "./components/MovieInfo/MovieInfo"
 import {NavBar} from "./components/NavBar/NavBar"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import Slideshow from "./components/Slideshow/Slideshow"
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
         <div className={sidebar ? "mainContent side" : "mainContent"}>
 
           <Switch>
-            <Route exact path="/movie-library-react/">
+            <Route exact path="/">
               <div style={{
                 display:"flex",
                 flexDirection:"column",
