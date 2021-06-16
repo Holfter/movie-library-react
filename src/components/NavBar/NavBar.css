@@ -74,3 +74,50 @@ ul{list-style: none;}
     background:#333333;
     border-radius:50%;
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion{
+    display: none;
+    border:none;
+    margin-right:20px;
+    background: black;
+    color: white;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    display: none;
+    overflow: hidden;
+}
+
+.panelOn{
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+.panelOn form{
+    display: flex;
+    align-items: center;
+}
+
+.panelOn form input{
+    width: 100%;
+    outline: none;
+    padding:8px 10px;
+    background:rgb(36, 36, 36);
+    color:white;
+    border:none;
+}
+
+.searchButton-mobile{
+    height: 32px;
+    border:none;
+    background:rgb(36, 36, 36);
+    color:white;
+}
+
+
+@media (max-width:800px) {
+    .accordion{
+        display: block;
+    }
+}

@@ -1,15 +1,15 @@
-import React,{useEffect, useState} from "react"
+import React,{useEffect, useState, useCallback} from "react"
 import './App.css';
 import TMDB from "./components/TMDB"
 import MovieRow from "./components/MovieRow/MovieRow"
 import GenreButton from "./components/GenreButton/GenreButton"
 import MovieInfo from "./components/MovieInfo/MovieInfo"
-import NavBar from "./components/NavBar/NavBar"
+import {NavBar} from "./components/NavBar/NavBar"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Slideshow from "./components/Slideshow/Slideshow"
 
 function App() {
-
+  const [searchMovie, setSearchMovie] = useState("")
   const[movieList, setMovieList] = useState([])
   const[trending, setTrending] = useState([])
   const [sidebar, setSidebar] = useState(false);
@@ -23,10 +23,15 @@ function App() {
     }
     loadAll()
   }, []);
+
+  const handleSearch = (e,movie) => {
+    e.preventDefault()
+    setSearchMovie(movie)
+  }
   return (
     <Router> 
       <div className="App">   
-          <NavBar items={movieList} func={showSideBar}/>
+          <NavBar click={handleSearch} items={movieList} func={showSideBar}/>
           <div className={sidebar ? 'navbar active' : "navbar"}>
                 <GenreButton items={movieList} side={sidebar}/>
           </div>
@@ -45,7 +50,7 @@ function App() {
               </div>
                 
             </Route>
-            <Route path="/results"></Route>
+            <Route path="/results">{/*<div style={{padding:"150px",background:"red"}}>{searchMovie}</div>*/}<MovieRow id={searchMovie}/></Route>
             <Route path="/movies/:id"><MovieInfo/></Route>
             {movieList.map((item,key) => (<Route key={key} path={`/${item.name}`}><MovieRow id={item.id} title={item.name}/></Route>))}
           </Switch>

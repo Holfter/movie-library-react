@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import "./Slideshow.css"
 import { Slide } from 'react-slideshow-image';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -7,14 +7,12 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import {Link} from "react-router-dom";
 
 export default function Slideshow(props) {
-    const array = props.trends.map((i,key) => (<div key={key} className="indicator"><img src={`https://image.tmdb.org/t/p/original/${i.poster_path}`}/></div>))
     const zoomOutProperties = {
         indicators: false,
         scale: 0.4,
-        //indicators: i => (<div className="indicator">{array[i]}</div>),
         duration:4000,
         canSwipe:true,
-        autoplay:false,
+        autoplay:true,
         transitionDuration:300,
         prevArrow:<ArrowBackIosIcon style={{position:"absolute",left:0,cursor: "pointer"}}/>,
         nextArrow:<ArrowForwardIosIcon style={{position:"absolute",right:0,cursor: "pointer"}}/>
@@ -38,7 +36,7 @@ export default function Slideshow(props) {
                             </div>
                         </div>
                         <div className="gradient"></div>
-                        <img className="backdrop_path" src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="image" />
+                        <img className="backdrop_path" src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="img" />
                     </div>
                 ))}
             </Slide>

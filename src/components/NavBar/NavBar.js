@@ -1,12 +1,26 @@
-import React,{useState} from 'react'
+import React,{useState, useRef} from 'react'
 import Logo from "../../logo.png"
 import "./NavBar.css"
-import GenreButton from "../GenreButton/GenreButton"
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search';
+import CloseIcon from '@material-ui/icons/Close';
 
-function NavBar(props) {
+export function NavBar(props) {
+    let history = useHistory();
+    const [accordion, setAccordion] = useState()
+    const [inputValue, setInputValue] = useState()
+
+    const setMovie = (e) =>{
+        history.push("/results")
+        props.click(e, inputValue)
+        setInputValue("")
+    }
+
+    const handleAccordion = () => {
+        setAccordion(accordion === "" ? "active" : "")
+    }
+
     return (
         <div className="topNav">
             <div className="fixedBar">
@@ -22,20 +36,24 @@ function NavBar(props) {
                         </Link>
                         
                     </div>
-                    <form className="form" action="submit">
-                        <input className="searchMovie" type="text" />
-                        <button className="searchButton"><SearchIcon/></button>
+                    <form className="form" onSubmit={(e) => setMovie(e)}>
+                        <input placeholder="Search movie" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="searchMovie"/>
+                        <button className="searchButton"><SearchIcon/></button> 
                     </form>
+                    
                     <div>
-                        <div>
+                        <div style={{display:"flex"}}>
+                            <button onClick={() => handleAccordion()} className="accordion">{accordion === "active" ? <CloseIcon/> : <SearchIcon/>}</button>
                             <div className="profilePic"></div>
                         </div>
                     </div>
-                
-                
+            </div>
+            <div className={accordion === "active" ? "panel panelOn" : "panel"}>
+                <form className="form-mobile" onSubmit={(e) => setMovie(e)}>
+                    <input placeholder="Search Movie" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="searchMovie-mobile"/>
+                    <button className="searchButton-mobile"><SearchIcon/></button> 
+                </form>
             </div>
         </div>
     )
 }
-
-export default NavBar

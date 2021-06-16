@@ -4,18 +4,18 @@ import TMDB from "../TMDB"
 import MovieCard from "../MovieCard/MovieCard"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 export default function MovieRow(props) {
-    let initialArray = []
+    const input = props.id
     const [movies, setMovies] = useState([])
     const [pageNumber, setPageNumber] = useState(2)
     const [active, setActive] = useState(null)
 
     useEffect(() => {
         const loadAll = async () => {
-            let list = await TMDB.getMovieByGenre(props.id,1)
+            let list = await TMDB.getMovieByGenre(input,1)
             setMovies(list.results)
         }
         loadAll()
-    }, [])
+    }, [input])
     
     const handleClick = (index) => {
         setActive(index)

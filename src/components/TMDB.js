@@ -121,7 +121,6 @@ const tmdb = {
 			return "false"
 		}else if(info.status_code){
 			if(!tv.status_code){
-				console.log(tv)
 				return tv
 			}
 		}
@@ -130,8 +129,11 @@ const tmdb = {
 
 
 	getMovieByGenre : async (id,page) => {
+		const searchMovie = await apiReq(`/search/movie?api_key=${API_KEY}&query=${id}&page=${page}`)
 		if(id === 0){
 			return await apiReq(`/movie/popular?api_key=${API_KEY}&page=${page}`)
+		}else if(isNaN(id)){
+			return searchMovie
 		}
 		 return await apiReq(`/discover/movie?with_genres=${id}&api_key=${API_KEY}&page=${page}`)
 	},

@@ -31,6 +31,7 @@
 }
 
 .trailer{
+    margin-top:20px;
     width: 50vw;
 }
 
@@ -40,7 +41,6 @@
 
 .mainContentInfo{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     position:absolute;
@@ -75,6 +75,22 @@
     margin: 10px 0 20px 20px;
 }
 
+.link-genres{
+    display: flex;
+    flex-direction: column;
+    margin-top:5px;
+}
+
+.year-info{
+    width: max-content;
+    background:#ff6347;
+    margin:10px 0 12px 0;
+}
+
+.trailerText{
+    color:#ff6347;
+}
+
 
 @media (min-width:360px) and (max-width:840px){
     .movieInfoBackground{
@@ -92,4 +108,12 @@
     .infoMovieTitle{
         font-size: 20px;
     }
+
+    .trailer{
+        width: 100%;
+        position: absolute;
+        left:0;   
+    }
 }
+
+
